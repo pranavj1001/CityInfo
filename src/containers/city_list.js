@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class CityList extends Component {
+class CityList extends Component {
   render() {
     return (
       <table className="table table-dark">
@@ -19,3 +20,7 @@ export default class CityList extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ city_info }) => ({ city_info });
+
+export default connect(mapStateToProps)(CityList);
