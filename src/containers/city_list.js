@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class CityList extends Component {
+  renderCities(cityData) {
+    return (
+      <tr key={cityData.city.id}>
+        <td>{cityData.city.name}</td>
+        <td>{cityData.city.country}</td>
+      </tr>
+    );
+  }
+
   render() {
     return (
       <table className="table table-dark">
@@ -15,12 +24,14 @@ class CityList extends Component {
             <th>Map</th>
           </tr>
         </thead>
-        <tbody />
+        <tbody>
+          {this.props.cityInfo.map(this.renderCities)}
+        </tbody>
       </table>
     );
   }
 }
 
-const mapStateToProps = ({ city_info }) => ({ city_info });
+const mapStateToProps = ({ cityInfo }) => ({ cityInfo });
 
 export default connect(mapStateToProps)(CityList);
