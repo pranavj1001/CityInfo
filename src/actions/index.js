@@ -2,4 +2,10 @@ import { OPEN_WEATHER_MAP_API_KEY, FETCH_INFO } from '../../ENVIRONMENT_VARIABLE
 
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${OPEN_WEATHER_MAP_API_KEY}`;
 
-export const fetchInfo = () => ({ type: FETCH_INFO });
+export const fetchInfo = (cityName) => {
+  const url = `${ROOT_URL}&q=${cityName}`;
+  return {
+    type: FETCH_INFO,
+    payload: url
+  };
+};
