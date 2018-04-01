@@ -16,11 +16,13 @@ class SearchBar extends Component {
 
   onFormSubmit(event) {
     event.preventDefault();
+    this.props.fetchInfo(this.state.searchQuery);
+    this.setState({ searchQuery: '' });
   }
 
   render() {
     return (
-      <form className="input-group" onSubmit={this.onFormSubmit}>
+      <form className="input-group" onSubmit={this.onFormSubmit.bind(this)}>
         <input
           placeholder="Search for a city"
           className="form-control"
