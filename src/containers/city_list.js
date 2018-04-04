@@ -13,30 +13,24 @@ class CityList extends Component {
       <tr key={cityData.city.id}>
         <td>{cityData.city.name}</td>
         <td>{cityData.city.country}</td>
-        <td>
-          <Chart data={temperature} color="orange" />
-        </td>
-        <td>
-          <Chart data={temperature} color="orange" />
-        </td>
-        <td>
-          <Chart data={temperature} color="orange" />
-        </td>
+        <td><Chart data={temperature} color="orange" /></td>
+        <td><Chart data={humidity} color="blue" /></td>
+        <td><Chart data={pressure} color="green" /></td>
       </tr>
     );
   }
 
   render() {
     return (
-      <table className="table table-dark">
+      <table className="table table-hover">
         <thead>
           <tr>
-            <th>City</th>
-            <th>Country</th>
-            <th>Temperature</th>
-            <th>Humidity</th>
-            <th>Pressure</th>
-            <th>Map</th>
+            <th style={width10}>City</th>
+            <th style={width10}>Country</th>
+            <th style={width20}>Temperature</th>
+            <th style={width20}>Humidity</th>
+            <th style={width20}>Pressure</th>
+            <th style={width20}>Map</th>
           </tr>
         </thead>
         <tbody>
@@ -46,6 +40,14 @@ class CityList extends Component {
     );
   }
 }
+
+const width10 = {
+  width: '10%'
+};
+
+const width20 = {
+  width: '20%'
+};
 
 const mapStateToProps = ({ cityInfo }) => ({ cityInfo });
 
