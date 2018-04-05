@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Chart from '../components/chart';
+import CityMap from '../components/city_map';
 
 class CityList extends Component {
   renderCities(cityData) {
-    console.log(cityData);
     const temperature = cityData.list.map(info => info.main.temp - 273.15);
     const humidity = cityData.list.map(info => info.main.humidity);
     const pressure = cityData.list.map(info => info.main.pressure);
+    const { lon, lat } = cityData.city.coord;
 
     return (
       <tr key={cityData.city.id}>
@@ -16,6 +17,7 @@ class CityList extends Component {
         <td><Chart data={temperature} color="orange" units="℃" /></td>
         <td><Chart data={humidity} color="blue" units="%" /></td>
         <td><Chart data={pressure} color="green" units="hPa" /></td>
+        <td><CityMap lon={lon} lat={lat} /></td>
       </tr>
     );
   }

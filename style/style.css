@@ -10,3 +10,8 @@ td, th {
 .input-group {
   margin: 20px 20px;
 }
+
+td:last-of-type, td:last-of-type > div {
+  height: 200px;
+  width: 250px
+}
