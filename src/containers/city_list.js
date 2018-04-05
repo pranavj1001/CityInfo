@@ -25,12 +25,12 @@ class CityList extends Component {
       <table className="table table-hover">
         <thead>
           <tr>
-            <th style={width10}>City</th>
-            <th style={width10}>Country</th>
-            <th style={width20}>Temperature (℃)</th>
-            <th style={width20}>Humidity (%)</th>
-            <th style={width20}>Pressure (hPa)</th>
-            <th style={width20}>Map</th>
+            <th style={width6}>City</th>
+            <th style={width6}>Country</th>
+            <th style={width22}>Temperature (℃)</th>
+            <th style={width22}>Humidity (%)</th>
+            <th style={width22}>Pressure (hPa)</th>
+            <th style={width22}>Map</th>
           </tr>
         </thead>
         <tbody>
@@ -41,12 +41,12 @@ class CityList extends Component {
   }
 }
 
-const width10 = {
-  width: '10%'
+const width6 = {
+  width: '6%'
 };
 
-const width20 = {
-  width: '20%'
+const width22 = {
+  width: '22%'
 };
 
 const mapStateToProps = ({ cityInfo }) => ({ cityInfo });
