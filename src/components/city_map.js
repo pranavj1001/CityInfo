@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class CityMap extends Component {
-  componetDidMount() {
+  componentDidMount() {
     new google.maps.Map(this.refs.map, {
       zoom: 12,
       center: {
