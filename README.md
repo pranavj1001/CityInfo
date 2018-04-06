@@ -19,6 +19,15 @@ For charts, react-sparklines is used.
 <img src="ScreenShot.png">
 </p>
 
+## To get started
+
+1. Download or clone this repo
+2. Make sure you have node.js
+3. cd to your project folder
+4. Run this command to install all the dependencies<br> ```npm install```
+5. Run this command to start the app<br>
+```npm start```
+
 ## Queries?
 
 email me at pranavj1001@gmail.com
