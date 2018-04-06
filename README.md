@@ -27,6 +27,7 @@ For charts, react-sparklines is used.
 4. Run this command to install all the dependencies<br> ```npm install```
 5. Run this command to start the app<br>
 ```npm start```
+6. Open browser and go to http://localhost:8080/
 
 ## Queries?
 
